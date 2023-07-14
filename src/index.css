@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+html {
+  
+}
+
+body{
+    margin: 50px;
+    line-height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+  background-color: #77633d;
+  border-radius: 5px;
+} */
+.text{
+  width: 100%;
+}
+select{
+  width: 200px;
+    height: 35px;
+    color: rgb(9, 9, 11);
+    border-radius: 5px;
+    background-color: whitesmoke;
+    border: 1px;
+}
+
+pre{
+  white-space: break-spaces;
+}
+
+body,
+html {
+  height: 100%;
+  background: #004F66;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.loader__spinner {
+  border: 10px solid rgba(0, 0, 0, 0.25);
+  border-left: 10px solid #178d37;
+  transform: translateZ(0);
+  animation: spinner 1.1s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+:root {
+  --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --msger-bg: #fff;
+  --border: 2px solid #ddd;
+  --left-msg-bg: #ececec;
+  --right-msg-bg: #579ffb;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: var(--body-bg);
+  font-family: Helvetica, sans-serif;
+}
+
+.title{
+  font-family: auto;
+  font-size: 20px;
+}
+.select{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.msger {
+ 
+  background-image: url("bg.jpg");
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 1080px;
+  border: var(--border);
+  border-radius: 5px;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.msger-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #666;
+}
+
+
+  hr {
+    margin: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.msger-chat {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 15px;
+  padding-bottom: 100px;
+}
+.msger-chat::-webkit-scrollbar {
+  width: 6px;
+}
+.msger-chat::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.msger-chat::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+}
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.msg:last-of-type {
+  margin: 0;
+}
+.msg-img {
+
+  width: 50px;
+  display: flex;
+  height: 50px;
+  margin-right: 10px;
+  background: #48b56e;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg);
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.msg-bubble {
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--left-msg-bg);
+}
+.msg-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.msg-info-name {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.msg-info-time {
+  font-size: 0.85em;
+}
+
+.left-msg .msg-bubble {
+  border-bottom-left-radius: 10px;
+}
+
+.right-msg {
+  flex-direction: row-reverse;
+}
+.right-msg .msg-bubble {
+  background: var(--right-msg-bg);
+  color: #fff;
+  border-bottom-right-radius: 0;
+}
+.right-msg .msg-img {
+  margin: 0 0 0 10px;
+}
+
+.msger-inputarea {
+  display: flex;
+  padding: 10px;
+  border-top: var(--border);
+  background: #eee;
+}
+.msger-inputarea * {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+}
+.msger-input {
+  flex: 1;
+  background: #ddd;
+}
+.msger-send-btn {
+ 
+  background: rgb(255, 255, 255);
+  color: #1c1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+.msger-send-btn:hover {
+  background: rgb(245, 247, 246);
+}
+
+.msger-chat {
+  
+}
+.logo{
+  width:150px;
+}
+.messagediv{
+  padding: 10px;
+}
